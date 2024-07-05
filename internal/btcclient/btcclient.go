@@ -21,7 +21,7 @@ func NewBtcClient(cfg *config.BtcConfig) (*BtcClient, error) {
 
 	connCfg := &rpcclient.ConnConfig{
 		Host:         cfg.Endpoint,
-		HTTPPostMode: true,
+		HTTPPostMode: false,
 		User:         cfg.RpcUser,
 		Pass:         cfg.RpcPass,
 		DisableTLS:   cfg.DisableTLS,
